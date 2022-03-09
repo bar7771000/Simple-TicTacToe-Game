@@ -48,11 +48,11 @@ function Announcement({ winner, onStart }) {
   return (
     <div className="Announcement">
       {winner === "tie" ? (
-        <div>Tie Game</div>
+        <div>It's a TIE</div>
       ) : (
         <div>
           <div>Congrats</div>
-          <h1>{winner}</h1>
+          <p>{winner}</p>
         </div>
       )}
       <button className="Button" onClick={onStart}>
@@ -67,8 +67,8 @@ function Message({ hasStarted, isXNext }) {
     <div className="Message">
       {hasStarted
         ? isXNext
-          ? "It's Xs turn"
-          : "It's Os turn"
+          ? "It's X's turn"
+          : "It's O's turn"
         : "Click to start game"}
     </div>
   );
